@@ -28,6 +28,9 @@ to the ```require``` section of your `composer.json` file.
 ```php
 <?php
 use conquer\peity\PeityBarWidget;
+use conquer\peity\PeityLineWidget;
+use conquer\peity\PeityPieWidget;
+use conquer\peity\PeityDonutWidget;
 ?>
 
 <?= PeityBarWidget::widget(['values'=>[5, 6, 7, 11, 14, 10, 15, 19, 15, 2]]); ?>
