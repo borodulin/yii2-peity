@@ -8,7 +8,9 @@ namespace conquer\peity;
 
 use yii\helpers\Html;
 use conquer\peity\PeityAsset;
-
+/**
+ * @link http://benpickles.github.io/peity/#line-charts 
+ */
 class PeityLineWidget extends \yii\base\Widget
 {
 	

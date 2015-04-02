@@ -8,7 +8,9 @@ namespace conquer\peity;
 
 use yii\helpers\Html;
 use conquer\peity\PeityAsset;
-
+/**
+ * @link http://benpickles.github.io/peity/#donut-charts 
+ */
 class PeityDonutWidget extends \yii\base\Widget
 {
 	
