@@ -18,6 +18,7 @@ class PeityAsset extends \yii\web\AssetBundle
 	];
 	
 	public $depends = [
-		'yii\web\JqueryAsset',	
+		'yii\web\JqueryAsset',
+		'conquer\excanvas\ExcanvasAsset',
 	];
 }
