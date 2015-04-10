@@ -1,6 +1,6 @@
 {
     "name": "conquer/peity",
-    "description": "Conquer peity widget",
+    "description": "Yii2 peity widget",
     "keywords": ["yii2", "extension", "widget", "peity"],
     "homepage": "https://github.com/borodulin/yii2-peity",
     "type": "yii2-extension",
