@@ -37,9 +37,9 @@ use conquer\peity\PeityDonutWidget;
 
 <?= PeityLineWidget::widget(['values'=>[5, 6, 7, 11, 14, 10, 15, 19, 15, 2]]); ?>
 
-<?= PeityPieWidget::widget(['values'=>0.6]); ?>
+<?= PeityPieWidget::widget(['values'=>[0.6]]); ?>
 
-<?= PeityDonutWidget::widget(['values'=>3/7]); ?>
+<?= PeityDonutWidget::widget(['values'=>[3/7]]); ?>
 
 ```
 
