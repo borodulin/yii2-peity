@@ -1,27 +1,27 @@
-Peity widget for Yii2 framework
-=================
+# Peity widget for Yii2 framework
+
+[![Latest Version](https://img.shields.io/packagist/v/conquer/peity.svg)](https://packagist.org/packages/conquer/peity)
+[![Total Downloads](https://img.shields.io/packagist/dt/conquer/peity.svg)](https://packagist.org/packages/conquer/peity)
+[![License](https://img.shields.io/packagist/l/conquer/peity.svg)](LICENSE.md)
 
 ## Description
 
 Peity (sounds like deity) is a simple jQuery plugin that converts an element's content into a simple <svg> mini pie  donut  line  or bar chart  and is compatible with any browser that supports <svg>: Chrome, Firefox, IE9+, Opera, Safari.
 For more information please visit [Peity](http://benpickles.github.io/peity/) 
 
+## Requirements
+
+- PHP 7.4 or 8.x
+- Yii 2.0
+- [asset-packagist](https://asset-packagist.org) repository configured in your application's `composer.json` (standard for Yii2 app templates)
+
 ## Installation
 
-The preferred way to install this extension is through [composer](http://getcomposer.org/download/). 
+Install the extension via [Composer](https://getcomposer.org):
 
-To install, either run
-
+```bash
+composer require conquer/peity:^1.1
 ```
-$ php composer.phar require conquer/peity "*"
-```
-or add
-
-```
-"conquer/peity": "*"
-```
-
-to the ```require``` section of your `composer.json` file.
 
 ## Usage
 
@@ -45,4 +45,4 @@ use conquer\peity\PeityDonutWidget;
 
 ## License
 
-**conquer/peity** is released under the MIT License. See the bundled `LICENSE.md` for details.
+**conquer/peity** is released under the MIT License. See the bundled [`LICENSE.md`](LICENSE.md) for details.
