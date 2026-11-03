@@ -1,7 +1,12 @@
 {
     "name": "conquer/peity",
     "description": "Yii2 peity widget",
-    "keywords": ["yii2", "extension", "widget", "peity"],
+    "keywords": [
+        "yii2",
+        "extension",
+        "widget",
+        "peity"
+    ],
     "homepage": "https://github.com/borodulin/yii2-peity",
     "type": "yii2-extension",
     "license": "MIT",
@@ -14,18 +19,18 @@
     ],
     "extra": {
         "branch-alias": {
-          "dev-master": "1.0.1.x-dev"
+            "dev-master": "1.0.1.x-dev"
         }
-      },
-    "require": {
-    	"php": ">=5.4.0",
-    	"yiisoft/yii2": "*",
-    	"conquer/excanvas": "~1.0.0",
-    	"bower-asset/peity": "~3.1.1"
     },
-	"autoload": {
-		"psr-4": {
-			"conquer\\peity\\": ""
-		}
-	}
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "yiisoft/yii2": "^2.0",
+        "conquer/excanvas": "~1.0.0",
+        "bower-asset/peity": "~3.1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "conquer\\peity\\": ""
+        }
+    }
 }
