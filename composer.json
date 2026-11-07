@@ -1,6 +1,6 @@
 {
     "name": "conquer/peity",
-    "description": "Yii2 peity widget",
+    "description": "Yii2 widgets for Peity SVG mini charts: line, bar, pie, donut",
     "keywords": [
         "yii2",
         "extension",
@@ -19,18 +19,36 @@
     ],
     "extra": {
         "branch-alias": {
-            "dev-master": "1.1.x-dev"
+            "dev-master": "1.2.x-dev"
         }
     },
     "require": {
         "php": "^7.4 || ^8.0",
         "yiisoft/yii2": "^2.0",
-        "conquer/excanvas": "~1.0.0",
-        "bower-asset/peity": "~3.1.1"
+        "bower-asset/peity": "^3.1.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.6"
     },
     "autoload": {
         "psr-4": {
             "conquer\\peity\\": ""
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "conquer\\peity\\tests\\": "tests/"
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
+    "config": {
+        "allow-plugins": {
+            "yiisoft/yii2-composer": true
         }
     }
 }

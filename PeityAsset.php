@@ -7,18 +7,22 @@
 
 namespace conquer\peity;
 
-class PeityAsset extends \yii\web\AssetBundle
+use yii\web\AssetBundle;
+
+/**
+ * Peity jQuery plugin (SVG charts)
+ * @link https://github.com/benpickles/peity
+ * @author Andrey Borodulin
+ */
+class PeityAsset extends AssetBundle
 {
-	// The files are not web directory accessible, therefore we need
-	// to specify the sourcePath property. Notice the @bower alias used.
-	public $sourcePath = '@bower/peity';
-	
-	public $js = [
-		'jquery.peity.min.js',
-	];
-	
-	public $depends = [
-		'yii\web\JqueryAsset',
-		'conquer\excanvas\ExcanvasAsset',
-	];
+    public $sourcePath = '@bower/peity';
+
+    public $js = [
+        'jquery.peity.min.js',
+    ];
+
+    public $depends = [
+        'yii\web\JqueryAsset',
+    ];
 }

@@ -2,12 +2,13 @@
 
 [![Latest Version](https://img.shields.io/packagist/v/conquer/peity.svg)](https://packagist.org/packages/conquer/peity)
 [![Total Downloads](https://img.shields.io/packagist/dt/conquer/peity.svg)](https://packagist.org/packages/conquer/peity)
+[![CI](https://github.com/borodulin/yii2-peity/actions/workflows/ci.yml/badge.svg)](https://github.com/borodulin/yii2-peity/actions/workflows/ci.yml)
 [![License](https://img.shields.io/packagist/l/conquer/peity.svg)](LICENSE.md)
 
 ## Description
 
-Peity (sounds like deity) is a simple jQuery plugin that converts an element's content into a simple <svg> mini pie  donut  line  or bar chart  and is compatible with any browser that supports <svg>: Chrome, Firefox, IE9+, Opera, Safari.
-For more information please visit [Peity](http://benpickles.github.io/peity/) 
+Peity (sounds like deity) is a jQuery plugin that converts an element's content into a mini `<svg>` pie, donut, line or bar chart.
+For more information please visit [Peity](https://benpickles.github.io/peity/).
 
 ## Requirements
 
@@ -20,7 +21,7 @@ For more information please visit [Peity](http://benpickles.github.io/peity/)
 Install the extension via [Composer](https://getcomposer.org):
 
 ```bash
-composer require conquer/peity:^1.1
+composer require conquer/peity:^1.2
 ```
 
 ## Usage
@@ -33,15 +34,34 @@ use conquer\peity\PeityPieWidget;
 use conquer\peity\PeityDonutWidget;
 ?>
 
-<?= PeityBarWidget::widget(['values'=>[5, 6, 7, 11, 14, 10, 15, 19, 15, 2]]); ?>
+<?= PeityLineWidget::widget(['values' => [5, 6, 7, 11, 14, 10, 15, 19, 15, 2]]) ?>
 
-<?= PeityLineWidget::widget(['values'=>[5, 6, 7, 11, 14, 10, 15, 19, 15, 2]]); ?>
+<?= PeityBarWidget::widget([
+    'values' => [5, 6, 7, 11, 14, 10, 15, 19, 15, 2],
+    'fill' => ['#1abc9c'],
+    'height' => 24,
+    'width' => 64,
+]) ?>
 
-<?= PeityPieWidget::widget(['values'=>[0.6]]); ?>
+<!-- 3 of 7 -->
+<?= PeityPieWidget::widget(['values' => '3/7']) ?>
 
-<?= PeityDonutWidget::widget(['values'=>[3/7]]); ?>
-
+<!-- slices 1, 2 and 4 -->
+<?= PeityDonutWidget::widget(['values' => [1, 2, 4]]) ?>
 ```
+
+- `values` is an array or a string in the Peity format: `'5,3,9'`, or `'3/7'` for a pie or donut fraction.
+  A single number is a whole pie, so pass `'3/7'` or `[3, 4]` rather than `3/7`.
+- The chart options (`fill`, `height`, `width`, `min`, `max`, `stroke`, `radius`, `innerRadius`, ...)
+  are widget properties, see the [Peity documentation](https://benpickles.github.io/peity/).
+- `delimiter` separates the values (`,` by default; for pie and donut it is detected from the values).
+- `options` are the HTML attributes of the `<span>` element, e.g. `['class' => 'sparkline']`.
+
+## Upgrading to 1.2
+
+- `conquer/excanvas` is no longer a dependency: Peity draws SVG only, which ExplorerCanvas (a canvas polyfill
+  for IE 8) does not provide. If you register `conquer\excanvas\ExcanvasAsset` yourself, require `conquer/excanvas`.
+- Values are HTML-encoded.
 
 ## License
 
